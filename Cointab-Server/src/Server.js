@@ -1,7 +1,7 @@
 const app = require("./index");
 const connect = require("./config/db");
 const Pincode = require("../src/models/Usermodel")
-const Courier = require ("../src/models/Usermodel")
+const Courier = require ("../src/models/Courier.model")
 
 app.get("/pincode", async(req,res)=>{
     const items = await Pincode.find().lean().exec()
